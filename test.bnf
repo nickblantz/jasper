@@ -1,0 +1,21 @@
+<program> ::= <file_input>
+<file_input> ::= (<lf> | <stmt>)*
+<stmt> ::= <expr> (<sc> | <lf>)
+<expr> ::= <assignment_expr> | <arith_expr>
+<assignment_expr> ::= <lhs> <eq> <lit>
+<arith_expr> ::= <add_expr> | <sub_expr> | <mult_expr> | <div_expr>
+
+<add_expr> ::= <lit> <plus> <lit>
+<sub_expr> ::= <lit> <sub> <lit>
+<mult_expr> ::= <lit> <mult> <lit>
+<div_expr> ::= <lit> <div> <lit>
+
+
+<lit> ::= ( 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 )*
+<eq> ::= '='
+<sc> ::= ';'
+<lf> ::= '\n'
+<plus> ::= '+'
+<sub> ::= '-'
+<mult> ::= '*'
+<div> ::= '/'
